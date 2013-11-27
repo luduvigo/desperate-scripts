@@ -1,5 +1,10 @@
 ##########################################################################
-# Simple python script that is adding braces in if conditions of C++ files
+# Simple python script that is adding braces in if conditions of C++ files.
+# This script has the goal to help me automatize a little bit the 
+# insertion of braces after around 18000 if that have one line statements 
+# after them.
+#
+# param: input source file that we want to modify
 #
 # author: luduvigo (paoloantoniorossi@gmail.com)
 ##########################################################################
