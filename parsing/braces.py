@@ -6,14 +6,17 @@
 
 
 import sys
+import shutil
 
-infile, outfile = sys.argv[1], sys.argv[2]
+infile = sys.argv[1]
 
+
+# Backup of the file modified
+shutil.copyfile(infile, infile + '.backup')
 # Read file
-inf = open(infile)
-conta = 0
+inf = open(infile + '.backup')
 # Write file.
-out = open(outfile,"w")
+out = open(infile,"w")
 skip = False
 for line in inf.readlines():
 	if skip == True:

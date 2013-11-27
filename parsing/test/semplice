@@ -1,6 +1,8 @@
 if(True) {cio}
 if(False)
-ciao
+{
+	ciao
+}
 if(certo)
 {
 	bella
