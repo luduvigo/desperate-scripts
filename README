@@ -8,3 +8,7 @@ can be useful or NOT!
 
 author: luduvigo 
 (paoloantoniorossi@gmail.com)
+
+Scripts in the list:
+
+- braces.py = add braces after if conditions, if they are not present

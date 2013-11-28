@@ -25,8 +25,12 @@ out = open(infile,"w")
 skip = False
 space = ""
 for line in inf.readlines():
-	if skip == True:
-		if "{" in line: 
+	if "//" in line or "/*" in line:
+		out.write(line)
+		print "Skipped comment!"
+		skip = False
+	elif skip == True:
+		if "{" in line or "&&" in line or "||" in line: 
 			out.write(line)
 			print "-> brace already there"
 		else:
