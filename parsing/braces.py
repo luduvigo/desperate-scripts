@@ -30,7 +30,7 @@ for line in inf.readlines():
 		print "Skipped comment!"
 		skip = False
 	elif skip == True:
-		if "{" in line or "&&" in line or "||" in line: 
+		if "{" in line or "&&" in line or "||" in line or "if(" in line: 
 			out.write(line)
 			print "-> brace already there"
 		else:
