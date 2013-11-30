@@ -12,3 +12,4 @@ author: luduvigo
 Scripts in the list:
 
 - braces.py = add braces after if conditions, if they are not present
+- knuth_shuffle.py = shuffle items contained in a file
