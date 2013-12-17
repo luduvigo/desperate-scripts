@@ -13,7 +13,7 @@ import random
 
 def knuth_shuffle(data):
 	N = len(data)
-	for i in range(N):
+	for i in range(N - 1):
 		swap(data, i, random.randrange(i, N))
 	return data
 

@@ -30,16 +30,20 @@ for line in inf.readlines():
 		print "Skipped comment!"
 		skip = False
 	elif skip == True:
-		if "{" in line or "&&" in line or "||" in line or "if(" in line: 
+		if line == '\n':
+			print "found an end of line"
+			out.write(line)
+		elif "{" in line or "&&" in line or "||" in line or "if" in line:	
 			out.write(line)
 			print "-> brace already there"
+			skip = False
 		else:
 			dist = len(line) - len(line.lstrip())
 			out.write( space + '{\n' )
 			out.write( space + '\t' + line.lstrip() )
 			out.write( space + '}\n')
 			print "-> braces added"
-		skip = False
+			skip = False
 	elif "if(" in line and line[-2] == ')':
 		out.write(line)
 		dist = len(line) - len(line.lstrip())
